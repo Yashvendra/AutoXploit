@@ -7,6 +7,9 @@
 </p>
 AutoXploit is simply a shell sciript that helps you to generate metasploit payloads and starts the meterpreter handler quickly. At times, security researchers have to generate payloads and listen to the connection through handler constantly, AutoXploit not only allows you to quickly generate payloads but it also has an option to start the handler automatically. 
 
+### Prerequisite
+You should have a <b>linux</b> based system with <a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers#installing-metasploit-on-linux--mac-os-x">metasploit-framework</a> installed. 
+
 ### Installation
 Run `install.sh` as sudo and it will automatically install AutoXploit.
 ```
