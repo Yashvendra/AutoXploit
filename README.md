@@ -13,6 +13,6 @@ Make sure you run this script as super user.
 $ sudo AutoXploit
 ```
 ### Gallery
-<a href="https://ibb.co/Lv4KcRj"><img src="https://i.ibb.co/FnGpy3Z/Screenshot-from-2019-12-14-15-11-33.png" alt="Screenshot-from-2019-12-14-15-11-33" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>upload</a><br />
+<a href="https://ibb.co/Lv4KcRj"><img src="https://i.ibb.co/FnGpy3Z/Screenshot-from-2019-12-14-15-11-33.png" alt="Screenshot-from-2019-12-14-15-11-33" border="0"></a><br /><br />
 
 ##### Note: This script is made for educational purposes and to help security researchers. Any actions or activities performed using this script is solely your responsibility.
