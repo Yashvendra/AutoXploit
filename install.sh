@@ -44,7 +44,6 @@ do
 		clear 
 		echo -e "This feature is currently under construction.."
 		sleep 3
-		exit
 	elif [[ "$UORI" = "i" ]]
 	then 
 		clear
