@@ -17,7 +17,7 @@ folder='~/Desktop/payloads'
 
 
 
-autoxploitTitle () {
+logo () {
     echo -e "\033[1;31m  \t
   \t░█▀█░█░█░▀█▀░█▀█░█░█░█▀█░█░░░█▀█░▀█▀░▀█▀
   \t░█▀█░█░█░░█░░█░█░▄▀▄░█▀▀░█░░░█░█░░█░░░█░
@@ -35,7 +35,7 @@ target () {
 
 windows () {
     clear
-    autoxploitTitle 
+    logo 
     echo -e "\n"
     sleep 0.3
     echo -e "${Blue}+-------------------------------------------------------+"
@@ -87,7 +87,7 @@ windows () {
 
 android () {
     clear
-    autoxploitTitle
+    logo
     echo -e "\n"
     echo -e "${Blue}+-------------------------------------------------------+"
     echo -e "+\t${Green}Available Payloads for ${Yellow}[${Purple}Android${Yellow}]   ${Blue}             +"
@@ -138,7 +138,7 @@ android () {
 
 linux (){
     clear
-    autoxploitTitle
+    logo
     echo -e "\n"
     echo -e "${Blue}+-------------------------------------------------------+"
     echo -e "+\t${Green}Available Payloads for ${Yellow}[${Purple}Linux${Yellow}]     ${Blue}             +"
@@ -202,13 +202,7 @@ fi
 
 
 clear
-echo -e "\033[1;31m  \t
-  \t░█▀█░█░█░▀█▀░█▀█░█░█░█▀█░█░░░█▀█░▀█▀░▀█▀
-  \t░█▀█░█░█░░█░░█░█░▄▀▄░█▀▀░█░░░█░█░░█░░░█░
-  \t░▀░▀░▀▀▀░░▀░░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░
-       \033[1;36m--=By: Yashvendra Kashyap a.k.a y_k_007=--     
-";
-
+logo
 sleep 0.3
 echo -e "${Yellow}[*] Payloads are available For-\n"
 sleep 0.3
