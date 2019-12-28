@@ -27,4 +27,7 @@ $ sudo autoxploit
 ### Gallery
 <a href="https://ibb.co/L0jFdSY"><img src="https://i.ibb.co/NFDv2xt/Screenshot-from-2019-12-23-20-29-59.png" alt="Screenshot-from-2019-12-23-20-29-59" border="0"></a><br /><br />
 
+### Upcoming Updates
+Auxiliary scanners are on the way :) 
+
 ##### Note: This script is made for educational purposes and to help security researchers. Any actions or activities performed using this script is solely your responsibility.
